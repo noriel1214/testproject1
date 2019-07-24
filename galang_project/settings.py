@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'en3ndv70j3#uz$%dpm878)%c(tyy-wph#=#a(8be*%a7tl-fwi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -75,8 +75,11 @@ WSGI_APPLICATION = 'galang_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'btre_prod',
+        'USER': 'dbadmin',
+        'PASSWORD': 'password',
+        'HOST': 'localhost'
     }
 }
 
